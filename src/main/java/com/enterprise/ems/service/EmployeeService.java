@@ -1,4 +1,9 @@
 package com.enterprise.ems.service;
 
-public class EmployeeService {
+import com.enterprise.ems.dto.EmployeeDto;
+
+public interface EmployeeService {
+
+    public EmployeeDto createNewEmployee(EmployeeDto employeeDto);
+
 }
