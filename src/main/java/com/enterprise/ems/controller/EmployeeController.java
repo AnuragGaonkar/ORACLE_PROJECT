@@ -3,6 +3,8 @@ package com.enterprise.ems.controller;
 import com.enterprise.ems.dto.EmployeeDto;
 import com.enterprise.ems.service.EmployeeService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/employee")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class EmployeeController {
+    @Autowired
     private EmployeeService employeeService;
 
     @PostMapping
