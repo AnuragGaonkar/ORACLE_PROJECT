@@ -4,4 +4,6 @@ import com.enterprise.ems.entity.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
+    // Custom query to check if the email exists
+    boolean existsByEmail(String email);
 }
